@@ -1,0 +1,78 @@
+:root {
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-stone-100: hsl(30, 54%, 90%);
+    --clr-stone-150: hsl(30, 18%, 87%);
+    --clr-stone-600: hsl(30, 10%, 34%);
+    --clr-stone-900: hsl(24, 5%, 18%);
+
+    --clr-brown-800: hsl(14, 45%, 36%);
+
+    --clr-rose-50: hsl(330, 100%, 98%);
+    --clr-rose-800: hsl(332, 51%, 32%);
+
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    --fs-400: 1rem;
+    --fs-500: 1.3125rem;
+    --fs-700: 2rem;
+    --fs-800: 2.25rem;
+    --fs-900: 3rem;
+}
+
+/*
+ * Josh's Custom CSS Reset https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img /*, picture, video, canvas, svg */ {
+  display: block;
+  max-width: 100%;
+}
+
+/* 
+input, button, textarea, select {
+  font: inherit;
+}
+*/
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/** Utility classes */
+.bg-stone-100 {
+    background-color: var(--clr-stone-100);
+}
+
+.bg-white {
+    background-color: var(--clr-white);
+}
+
+.text-rose-800 {
+    color: var(--clr-rose-800);
+}
+
+.text-brown-800 {
+    color: var(--clr-brown-800);
+}
+
+.text-stone-600 {
+    color: var(--clr-stone-600);
+}
+
+.text-stone-900 {
+    color: var(--clr-stone-900);
+}
