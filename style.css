@@ -22,7 +22,8 @@
 }
 
 /*
- * Josh's Custom CSS Reset https://www.joshwcomeau.com/css/custom-css-reset/
+ * Josh's Custom CSS Reset (with modifications)
+ * https://www.joshwcomeau.com/css/custom-css-reset/
 */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -48,17 +49,21 @@ input, button, textarea, select {
 }
 */
 
+ul[role='list'], ol[role='list'] {
+    list-style: none;
+}
+
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
 /** Utility classes */
-.bg-stone-100 {
-    background-color: var(--clr-stone-100);
-}
-
 .bg-white {
     background-color: var(--clr-white);
+}
+
+.bg-rose-50 {
+    background-color: var(--clr-rose-50);
 }
 
 .text-rose-800 {
@@ -75,4 +80,9 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .text-stone-900 {
     color: var(--clr-stone-900);
+}
+
+/** General styling */
+body {
+    background-color: var(--clr-stone-100);
 }
