@@ -10,42 +10,46 @@
     --clr-rose-50: hsl(330, 100%, 98%);
     --clr-rose-800: hsl(332, 51%, 32%);
 
+    --ff-heading: 'Young Serif', serif;
+    --ff-body: 'Outfit';
+
     --fw-regular: 400;
     --fw-semibold: 600;
     --fw-bold: 700;
 
     --fs-400: 1rem;
     --fs-500: 1.3125rem;
-    --fs-700: 2rem;
-    --fs-800: 2.25rem;
+    --fs-700: 1.75rem;
+    --fs-800: 2.125rem;
     --fs-900: 3rem;
 }
 
 /*
- * Josh's Custom CSS Reset (with modifications)
- * https://www.joshwcomeau.com/css/custom-css-reset/
+* Josh's Custom CSS Reset (with modifications)
+* https://www.joshwcomeau.com/css/custom-css-reset/
 */
 *, *::before, *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 * {
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
 }
 
 img /*, picture, video, canvas, svg */ {
-  display: block;
-  max-width: 100%;
+    display: block;
+    max-width: 100%;
 }
 
 /* 
 input, button, textarea, select {
-  font: inherit;
+    font: inherit;
 }
 */
 
@@ -54,7 +58,7 @@ ul[role='list'], ol[role='list'] {
 }
 
 p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /** Utility classes */
@@ -64,6 +68,10 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .bg-rose-50 {
     background-color: var(--clr-rose-50);
+}
+
+.bg-stone-150 {
+    background-color: var(--clr-stone-150);
 }
 
 .text-rose-800 {
@@ -85,4 +93,56 @@ p, h1, h2, h3, h4, h5, h6 {
 /** General styling */
 body {
     background-color: var(--clr-stone-100);
+    font-family: var(--ff-body);
+}
+
+h1, h2 {
+    font-family: var(--ff-heading);
+    font-weight: var(--fw-regular);
+}
+
+h1 {
+    font-size: var(--fs-800);
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: var(--fs-700);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+section, .seperator {
+    margin: 0 2rem;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.prep-card {
+    padding: 1.5rem;
+}
+
+ul[role='list'] {
+    list-style: disc inside;
+    line-height: 2;
+}
+
+.seperator {
+    height: 1px;
+}
+
+.item-title {
+    font-weight: var(--fw-bold);
+}
+
+.attribution {
+    display: none;
 }
