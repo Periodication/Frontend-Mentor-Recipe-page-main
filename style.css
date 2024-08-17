@@ -120,6 +120,10 @@ section, .seperator {
     margin: 0 2rem;
 }
 
+.seperator {
+    height: 1px;
+}
+
 .intro {
     display: flex;
     flex-direction: column;
@@ -127,16 +131,34 @@ section, .seperator {
 }
 
 .prep-card {
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
 }
 
-ul[role='list'] {
-    list-style: disc inside;
-    line-height: 2;
+ul[role='list'] > li {
+    display: flex;
+    gap: 1.5rem;
+    padding-inline-start: 0.5rem;
 }
 
-.seperator {
-    height: 1px;
+.ul-marker {
+    display: flex;
+    align-items: center;
+}
+
+ol[role='list'] {
+    list-style: decimal outside;
+    padding-left: 1.5rem;
+}
+
+ol[role='list'] > li {
+    padding-inline-start: 1.25rem;
+    padding-block-start: 0.75rem;
+}
+
+ol[role='list'] > li::marker {
+    color: var(--clr-brown-800);
+    font-weight: var(--fw-bold);
 }
 
 .item-title {
