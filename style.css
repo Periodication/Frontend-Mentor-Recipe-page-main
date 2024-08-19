@@ -10,18 +10,18 @@
     --clr-rose-50: hsl(330, 100%, 98%);
     --clr-rose-800: hsl(332, 51%, 32%);
 
-    --ff-heading: 'Young Serif', serif;
+    --ff-heading-main: 'Young Serif', serif;
     --ff-body: 'Outfit';
 
     --fw-regular: 400;
     --fw-semibold: 600;
     --fw-bold: 700;
 
-    --fs-400: 1rem;
-    --fs-500: 1.3125rem;
-    --fs-700: 1.75rem;
-    --fs-800: 2.125rem;
-    --fs-900: 3rem;
+    --fs-400: 1rem; /* 16px */
+    --fs-500: 1.25rem; /* 20px */
+    --fs-700: 1.75rem; /* 28px */
+    --fs-800: 2.125rem; /* 34px */
+    --fs-900: 3rem; /* 48px */
 }
 
 /*
@@ -97,7 +97,7 @@ body {
 }
 
 h1, h2 {
-    font-family: var(--ff-heading);
+    font-family: var(--ff-heading-main);
     font-weight: var(--fw-regular);
 }
 
@@ -110,17 +110,21 @@ h2 {
     font-size: var(--fs-700);
 }
 
+h3 {
+    font-size: var(--fs-500);
+}
+
 .card {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-section, .seperator {
+section, .seperator-line {
     margin: 0 2rem;
 }
 
-.seperator {
+.seperator-line {
     height: 1px;
 }
 
@@ -137,13 +141,15 @@ section, .seperator {
 
 ul[role='list'] > li {
     display: flex;
-    gap: 1.5rem;
+    align-items: center;
+    gap: 1.75rem;
     padding-inline-start: 0.5rem;
 }
 
-.ul-marker {
+ul[role='list'] > li > .ul-marker {
     display: flex;
     align-items: center;
+    font-size: var(--fs-500);
 }
 
 ol[role='list'] {
