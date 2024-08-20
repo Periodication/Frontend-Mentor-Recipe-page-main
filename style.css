@@ -225,5 +225,7 @@ ol[role='list'] > li::marker {
 
 .attribution {
     position: absolute;
-    bottom: 0;
+    z-index: 1;
+    top: 0;
+    text-align: center;
 }
